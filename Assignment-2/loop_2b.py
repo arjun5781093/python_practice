@@ -2,20 +2,19 @@
 
 #A program to print a pattern
 
-'''n=5
-j=1
 
-while j<=n:
-    i=n-j
-    while i>=0:
-        print(" ",end="")
-        i-=1
-    k=1
-    while k<=j:
-        print("*",end="")
-        k+=1
-    j+=1
-    print()
-'''
+n=int(input("Enter a number: "))
+ch=1 #Number of times * needs to be printed
+sp=n-1 #Number of times space needs to be printed
 
-print('*'*5)
+for line in range(1,(n//2)+2):
+    print(" "*sp,"*"*ch,sep="")
+    ch+=2
+    sp-=2    
+
+ch=n-2 #Number of times * needs to be printed
+sp=2 #Number of times space need to be printed
+for line in range((n//2)+2,n+1):
+    print(" "*sp,"*"*ch,sep="")
+    ch-=2
+    sp+=2
