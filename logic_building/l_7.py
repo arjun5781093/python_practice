@@ -4,6 +4,12 @@
 
 sec=int(input("Input number of seconds: "))
 
+hh=sec//3600
+mm=(sec%3600)//60
+ss=(sec%3600)%60
+print("{:02}:{:02}:{:02}".format(hh,mm,ss))
+
+'''
 if sec < 60:
     hh = 0
     mm = 0
@@ -16,5 +22,5 @@ else:
     hh=sec//3600
     mm=(sec%3600)//60
     ss=(sec%3600)%60
+'''
 
-print("{:02}:{:02}:{:02}".format(hh,mm,ss))
